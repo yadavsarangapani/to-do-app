@@ -1,0 +1,187 @@
+/* ======================== */
+/* Reset & Body Styling     */
+/* ======================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* ======================== */
+/* Main container           */
+/* ======================== */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* ======================== */
+/* Todo box / planner card   */
+/* ======================== */
+.todo-box {
+  background: #ffffff;
+  padding: 30px 25px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.todo-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* ======================== */
+/* Input + buttons + selects */
+/* ======================== */
+.input-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-box button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-box button:hover {
+  background-color: #0056b3;
+}
+
+.input-box select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: #fff;
+}
+
+/* ======================== */
+/* Sections (New, Pending, Completed) */
+/* ======================== */
+.sections {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sections div {
+  flex: 1;
+  min-width: 140px;
+}
+
+.sections h3 {
+  margin-bottom: 10px;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* ======================== */
+/* Lists & List items       */
+/* ======================== */
+.sections ul {
+  list-style: none;
+  padding: 0;
+  min-height: 50px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+/* Color-coded statuses */
+.list-item.new {
+  background-color: #d0e7ff; /* blue */
+}
+
+.list-item.pending {
+  background-color: #ffe5b4; /* orange */
+}
+
+.list-item.completed {
+  background-color: #d4edda; /* green */
+  text-decoration: line-through;
+  color: #2f6627;
+}
+
+/* Hover effect on list items */
+.list-item:hover {
+  opacity: 0.9;
+}
+
+/* ======================== */
+/* Delete icon on Pending    */
+/* ======================== */
+.delete-icon {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.delete-icon:hover {
+  color: #a71d2a;
+}
+
+/* ======================== */
+/* Responsive adjustments   */
+/* ======================== */
+@media (max-width: 600px) {
+  .todo-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .sections {
+    flex-direction: column;
+  }
+
+  .sections div {
+    width: 100%;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box input, .input-box select, .input-box button {
+    width: 100%;
+  }
+}
